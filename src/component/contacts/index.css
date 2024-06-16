@@ -1,0 +1,44 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacts__block {
+  display: flex;
+  gap: 20px;
+}
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contacts__photo {
+  height: 80px;
+  width: 80px;
+  border-radius: 80px;
+}
+.contacts__text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+}
+.contacts__sub-block {
+  display: flex;
+  gap: 16px;
+}
+.contacts__sub-value {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.contacts__sub-value:not(:last-child)::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 4px;
+  border-radius: 4px;
+  background-color: #000;
+}
+.contacts__info {
+  font-size: 16px;
+}
