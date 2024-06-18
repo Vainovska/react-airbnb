@@ -29,30 +29,36 @@ export default function AmenitiesList({
       <div className="amenities-list">
         <Heading border>Зручності</Heading>
         <ul className="amenities-list__block">
-          <ListItem imageSrc={Pool}>
-            {pool}
-            Басейн
-          </ListItem>
-          <ListItem imageSrc={Gym}>{gym} Спортивний зал</ListItem>
-          <ListItem imageSrc={Breakfast}>
-            {breakfast} Безкоштовний сніданок
-          </ListItem>
-          <ListItem imageSrc={Wifi}>{wifi} Безкоштовний Wi-Fi</ListItem>
-          <ListItem imageSrc={Parking}>
-            {parking} Безкоштовний вуличний паркінг
-          </ListItem>
-          <ListItem imageSrc={Pet}>
-            {pets} Дозволено розміщення з домашніми тваринами
-          </ListItem>
-          <ListItem imageSrc={Airpot}>
-            {airport} Трансфер до/з аеропорту
-          </ListItem>
-          <ListItem imageSrc={Security}>{security} Консьєрж-сервіс</ListItem>
-          <ListItem imageSrc={Room}>
-            {room_servis}
-            Обслуговування номерів
-          </ListItem>
-          <ListItem imageSrc={Child}>{child} Підходить для дітей</ListItem>
+          {pool === true && <ListItem imageSrc={Pool}>Басейн</ListItem>}
+          {gym === true && <ListItem imageSrc={Gym}>Спортивний зал</ListItem>}
+          {breakfast === true && (
+            <ListItem imageSrc={Breakfast}>Безкоштовний сніданок</ListItem>
+          )}
+          {wifi === true && (
+            <ListItem imageSrc={Wifi}>Безкоштовний Wi-Fi</ListItem>
+          )}
+          {parking === true && (
+            <ListItem imageSrc={Parking}>
+              Безкоштовний вуличний паркінг
+            </ListItem>
+          )}
+          {pets === true && (
+            <ListItem imageSrc={Pet}>
+              Дозволено розміщення з домашніми тваринами
+            </ListItem>
+          )}
+          {airport === true && (
+            <ListItem imageSrc={Airpot}>Трансфер до/з аеропорту</ListItem>
+          )}
+          {security === true && (
+            <ListItem imageSrc={Security}>Консьєрж-сервіс</ListItem>
+          )}
+          {room_servis === true && (
+            <ListItem imageSrc={Room}>Обслуговування номерів</ListItem>
+          )}
+          {child === true && (
+            <ListItem imageSrc={Child}>Підходить для дітей</ListItem>
+          )}
         </ul>
       </div>
     </Box>
